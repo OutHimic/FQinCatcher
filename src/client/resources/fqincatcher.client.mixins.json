@@ -1,0 +1,17 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "cn.craftime.fqincatcher.mixin.client",
+  "compatibilityLevel": "JAVA_21",
+  "client": [
+    "ChunkDeltaUpdateS2CPacketAccessor",
+    "CopyNetworkMixin",
+    "SeedCrackerNetworkMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "overwrites": {
+    "requireAnnotations": true
+  }
+}

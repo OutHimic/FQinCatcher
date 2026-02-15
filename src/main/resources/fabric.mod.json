@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "fqincatcher",
+  "version": "${version}",
+
+  "name": "FQinCatcher",
+  "description": "快捷复制1.21.1服务器的地图。",
+  "authors": [],
+  "contact": {},
+
+  "license": "MIT",
+  "icon": "assets/fqincatcher/icon.png",
+
+  "environment": "client",
+  "entrypoints": {
+    "fabric-datagen": ["cn.craftime.fqincatcher.client.FqincatcherDataGenerator"],
+    "client": ["cn.craftime.fqincatcher.client.FqincatcherClient"],
+    "main": ["cn.craftime.fqincatcher.Fqincatcher"],
+    "seedcrackerx": ["cn.craftime.fqincatcher.integration.seedcrackerx.FqincatcherSeedCrackerEP"]
+  },
+
+  "mixins": [
+    "fqincatcher.mixins.json"
+    ,{
+      "config": "fqincatcher.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric-api": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
